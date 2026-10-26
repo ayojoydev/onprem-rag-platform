@@ -1,0 +1,39 @@
+# Python and local environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Node and generated frontend assets
+node_modules/
+dist/
+coverage/
+
+# Local credentials and customer configuration
+.env
+.env.*
+!.env.example
+customer.local.yaml
+customer.local.yml
+*.local.yaml
+*.local.yml
+secrets/
+*.pem
+*.key
+
+# Local databases, downloaded models and runtime data
+*.sqlite
+*.sqlite3
+data/
+models/
+backups/
+*.log
+
+# Editor and OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

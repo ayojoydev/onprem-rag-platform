@@ -1,0 +1,22 @@
+# Пример локального overlay для examples/retail-assistant.yaml.
+# Это проект формата; parser и bootstrap пока не реализованы.
+# Будущий bootstrap читает эти поля как customer.local.*.
+# Скопируйте файл в customer.local.yaml на сервере заказчика.
+# Значения customer.local.yaml и secret-файлы не должны попадать в Git.
+
+retail_api:
+  # Демонстрационный адрес будущего контейнера симулятора.
+  # Наличие этого примера не означает, что сервис уже реализован.
+  base_url: "http://business-api-simulator:8080"
+  allowed_origins:
+    - "http://business-api-simulator:8080"
+
+  # Пример адреса опубликованного HTTP-сервиса 1С вместо симулятора:
+  # base_url: "https://1c.internal.example/retail/hs/assistant"
+  # allowed_origins:
+  #   - "https://1c.internal.example"
+  # Дополнительно потребуется проверенный адаптер к этому сервису.
+
+# Секрет retail_api_token задается отдельным локальным файлом.
+# В целевом контейнере он доступен по пути /run/secrets/retail_api_token.
+# Значение токена в YAML не указывается; путь на хосте задает deployment plan.

@@ -6,6 +6,8 @@ venv/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
+*.egg-info/
+build/
 
 # Node and generated frontend assets
 node_modules/

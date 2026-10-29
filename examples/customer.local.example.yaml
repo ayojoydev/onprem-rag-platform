@@ -5,8 +5,8 @@
 # Значения customer.local.yaml и secret-файлы не должны попадать в Git.
 
 retail_api:
-  # Демонстрационный адрес будущего контейнера симулятора.
-  # Наличие этого примера не означает, что сервис уже реализован.
+  # Адрес симулятора в контейнерной сети compose.yaml.
+  # Для приложения на хосте используйте http://127.0.0.1:8081.
   base_url: "http://business-api-simulator:8080"
   allowed_origins:
     - "http://business-api-simulator:8080"
